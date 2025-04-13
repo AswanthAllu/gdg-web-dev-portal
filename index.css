@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6ebf4;
+    color: #E0E0E0;
+    text-align: center;
+    margin: 0;
+}
+header {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #112240;
+    
+    margin-bottom: 20px;
+    color: #64FFDA;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+/* Vertical connecting line */
+.container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #64FFDA;
+    height: calc(100% - 40px);
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+}
+.card {
+    background: #112240;
+    padding: 20px;
+    width:80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+@media (orientation:landscape){
+    .card {
+        width:30%;
+        height:12rem;
+    }
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card h2 {
+    color: #64FFDA;
+}
+.watch-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #64FFDA;
+    color: #112240;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.watch-btn:hover {
+    background: #52D1C0;
+}
+/* Line segment between cards */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background-color: #64FFDA;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+}
+/* Hide line on the first card */
+.card:first-child::before {
+    display: none;
+}
+footer {
+   
+    background: #333;
+    color: white;
+    padding: 1rem;
+    margin-top: 6rem;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
