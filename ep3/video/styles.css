@@ -22,7 +22,6 @@ header {
     margin: 1rem auto;
 }
 
-
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -50,4 +49,15 @@ footer {
     color: white;
     margin: 0 10px;
     font-size: 1.5rem;
+}
+.watch-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #64FFDA;
+    color: #112240;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
