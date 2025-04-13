@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(-45deg, #ff4e50, #1e3c72, #ff9a9e, #16222a);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+            color: white;
+            text-align: center;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: cyan;
+        }
+        
+        p {
+            color: orange;
+            font-weight: bold;
+            font-size: 29px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Quiz Completed! 🏆</h1>
+        <p id="score">Your Score: </p>
+        <button onclick="restartQuiz()">Practice Again</button>
+        <button onclick="goHome()">Home</button>
+    </div>
+    <script>
+        document.getElementById("score").innerText = "Your Score: " + localStorage.getItem("quizScore");
+        function restartQuiz() { window.location.href = "quiz.html"; }
+        function goHome() { window.location.href = "../../index.html"; }
+    </script>
+</body>
+</html>

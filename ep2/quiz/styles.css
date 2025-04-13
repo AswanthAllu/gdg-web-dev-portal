@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated Gradient Background */
+.animated-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ff6b6b, #ff3d00, #1e88e5, #6dd5fa);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Quiz Container */
+.quiz-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.3);
+    width: 50%;
+}
+
+/* Headings */
+h1 {
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.4);
+}
+
+p {
+    color: #fff;
+}
+
+/*  Timer */
+#timer {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #d32f2f;
+}
+
+/*  Buttons */
+button {
+    background: #d50000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #b71c1c;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Radio Button Styling */
+input[type="radio"] {
+    display: none;
+}
+
+/*Default Blue Background for Options */
+label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    background: #1e88e5; /* Default Blue */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+
+/* Hover Effect */
+label:hover {
+    background: #1565c0;
+}
+
+/*  Correct Answer - Green */
+.correct {
+    background: #4caf50 !important; /* Green */
+    color: white !important;
+    font-weight: bold;
+}
+
+/*  Wrong Answer - Red */
+.wrong {
+    background: #d32f2f !important; /* Red */
+    color: white !important;
+    font-weight: bold;
+}
+
