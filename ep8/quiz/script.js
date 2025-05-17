@@ -10,14 +10,14 @@ const quizQuestions = [
         answer: "The URL the link points to"
     },
     {
-        question: "2. Which HTML tag is used to create a hyperlink?",
+        question: "2. Which protocol in `href` is used to link to an email address?",
         options: [
-            "<link>",
-            "<a>",
-            "<href>",
-            "<url>"
+            "mail:",
+            "email:",
+            "mailto:",
+            "message:"
         ],
-        answer: "<a>"
+        answer: "mailto:"
     },
     {
         question: "3. What happens if you use an invalid `href` value?",
@@ -60,14 +60,14 @@ const quizQuestions = [
         answer: "rel"
     },
     {
-        question: "7. What does an anchor tag without an `href` behave like?",
+        question: "7. What’s the default behavior of an anchor tag when clicked with a valid href?",
         options: [
-            "A form button",
-            "A clickable link",
-            "Plain text",
-            "An image"
+            "It opens a dropdown",
+            "It navigates to the given link",
+            "It submits a form",
+            "It refreshes the page"
         ],
-        answer: "Plain text"
+        answer: "It navigates to the given link"
     },
     {
         question: "8. Which href value is commonly used to link to the top of the page?",
